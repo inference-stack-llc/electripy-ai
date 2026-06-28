@@ -11,7 +11,7 @@ Everything required between prototype and production.
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![CI](https://github.com/inference-stack-llc/electripy-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/inference-stack-llc/electripy-ai/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/electripy-ai?color=brightgreen)](https://pypi.org/project/electripy-ai/)
+[![PyPI](https://img.shields.io/pypi/v/electripy-ai?color=brightgreen&v=1)](https://pypi.org/project/electripy-ai/)
 [![Alpha](https://img.shields.io/badge/status-alpha-orange.svg)](#status)
 [![Open Source](https://img.shields.io/badge/open%20source-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
