@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "electripy-ai"
-version = "0.4.0"
+version = "0.5.0"
 description = "Open source AI Application Runtime for reliable, observable, and governable production AI systems."
 readme = "README.md"
 requires-python = ">=3.11"

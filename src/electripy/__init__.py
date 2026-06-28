@@ -1,6 +1,6 @@
 """ElectriPy AI — The Open Source AI Application Runtime."""
 
-__version__ = "0.1.0"
+__version__ = "0.5.0"
 
 from electripy.core.config import Config
 from electripy.core.errors import ElectriPyError

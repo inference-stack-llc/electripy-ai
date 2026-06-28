@@ -1,6 +1,6 @@
 {
   "name": "@electripy/cli",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "description": "NPM wrapper for ElectriPy AI CLI — The Open Source AI Application Runtime",
   "keywords": [
     "electripy",
