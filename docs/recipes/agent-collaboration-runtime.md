@@ -1,6 +1,8 @@
-# Recipe: Specialist Agent Collaboration
+# Observable Runtime Routing: Specialist Agent Collaboration
 
-This recipe demonstrates a planner -> retriever -> verifier pipeline using the Agent Collaboration Runtime.
+This recipe demonstrates a planner → retriever → verifier pipeline using the ElectriPy AI Agent Collaboration Runtime.
+
+> **When to use this:** You need to decompose work across specialist roles with deterministic handoffs, bounded hop counts, and policy integration — without adopting a full agent framework.
 
 ## Scenario
 

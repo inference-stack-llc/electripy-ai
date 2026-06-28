@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Repositioned project from ElectriPy Studio to **ElectriPy AI**.
+- Updated project category to **Open Source AI Application Runtime**.
+- Introduced **LSAS Architecture** (Layered Systems Architecture for AI Systems) as the architectural model behind the runtime.
+- Updated documentation, README, and package positioning around production AI reliability, observability, governance, evaluation, and runtime infrastructure.
+- Replaced marketing copy centred on "observable agent engineering" with runtime-first positioning.
+- Removed consultancy attributions from human-facing docs.
+
+### Package
+- Public package name moving toward `electripy-ai` (`pip install electripy-ai`).
+- Python import namespace remains `electripy` unless otherwise noted.
+
+### Added
+- `MANIFESTO.md` — AI Needs Infrastructure.
+- `docs/lsas.md` — LSAS Architecture reference.
+- `docs/architecture.md` — how ElectriPy AI maps to LSAS layers.
+
 ## [0.4.0] — 2026-03-31
 
 ### Added

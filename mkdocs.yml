@@ -1,12 +1,12 @@
-site_name: ElectriPy Studio
-site_url: https://inference-stack-llc.github.io/electripy-studio/
+site_name: ElectriPy AI
+site_url: https://electripy.ai/docs/
 site_description: >-
-  The Python substrate for observable agent engineering — LLM routing, policy
-  governance, MCP integration, evaluation, skills packaging, realtime
-  orchestration, structured tracing, and 30+ composable components.
-site_author: Inference Stack
-repo_url: https://github.com/inference-stack-llc/electripy-studio
-repo_name: inference-stack-llc/electripy-studio
+  The Open Source AI Application Runtime — reliability, observability, governance,
+  evaluation, MCP integration, skills packaging, realtime orchestration, and
+  30+ composable runtime components for production AI systems.
+site_author: ElectriPy AI Contributors
+repo_url: https://github.com/inference-stack-llc/electripy-ai
+repo_name: inference-stack-llc/electripy-ai
 
 theme:
   name: material
@@ -32,56 +32,63 @@ theme:
     - content.code.copy
 
 nav:
-  - Home: index.md
+  - Overview: index.md
+  - Manifesto: manifesto.md
+  - LSAS Architecture: lsas.md
+  - Architecture: architecture.md
   - Getting Started:
       - Installation: getting-started/installation.md
       - Quickstart: getting-started/quickstart.md
-  - User Guide:
-      - Foundation:
-          - Core: user-guide/core.md
+  - Runtime Domains:
+      - Reliability:
           - Concurrency: user-guide/concurrency.md
           - Circuit Breaker: user-guide/circuit-breaker.md
-          - IO: user-guide/io.md
-          - CLI: user-guide/cli.md
-      - Agent Infrastructure:
+      - Observability:
+          - Observe — Structured Tracing: user-guide/ai-observe.md
+          - Telemetry: user-guide/ai-telemetry.md
+          - Sensitive Data Scanner: user-guide/ai-sensitive-data-scanner.md
+      - Governance:
+          - Policy Engine: user-guide/ai-policy.md
+          - Policy Gateway: user-guide/ai-policy-gateway.md
+      - Evaluation:
+          - Evals: user-guide/ai-evals.md
+          - Eval Assertions: user-guide/ai-eval-assertions.md
+          - RAG Eval Runner: user-guide/ai-rag-eval-runner.md
+      - Orchestration:
+          - Workload Router: user-guide/ai-workload-router.md
+          - Realtime Sessions: user-guide/ai-realtime.md
+          - Agent Collaboration: user-guide/ai-agent-collaboration.md
+          - MCP: user-guide/ai-mcp.md
+          - Skills: user-guide/ai-skills.md
+      - Model Runtime:
           - LLM Gateway: user-guide/ai-llm-gateway.md
           - Provider Adapters: user-guide/ai-provider-adapters.md
-          - Workload Router: user-guide/ai-workload-router.md
           - Fallback Chain: user-guide/ai-fallback-chain.md
           - Batch Complete: user-guide/ai-batch-complete.md
           - Structured Output: user-guide/ai-structured-output.md
           - LLM Cache: user-guide/ai-llm-cache.md
           - Replay Tape: user-guide/ai-replay-tape.md
-      - Observability & Governance:
-          - Observe — Structured Tracing: user-guide/ai-observe.md
-          - Telemetry: user-guide/ai-telemetry.md
-          - Policy Engine: user-guide/ai-policy.md
-          - Policy Gateway: user-guide/ai-policy-gateway.md
-          - Sensitive Data Scanner: user-guide/ai-sensitive-data-scanner.md
-      - Evaluation & Quality:
-          - Evals: user-guide/ai-evals.md
-          - Eval Assertions: user-guide/ai-eval-assertions.md
-          - RAG Eval Runner: user-guide/ai-rag-eval-runner.md
-      - Composition & Packaging:
-          - Skills: user-guide/ai-skills.md
-          - MCP Toolkit: user-guide/ai-mcp.md
+  - User Guide:
+      - Foundation:
+          - Core: user-guide/core.md
+          - IO: user-guide/io.md
+          - CLI: user-guide/cli.md
+      - Supporting Components:
           - Prompt Fingerprint: user-guide/ai-prompt-fingerprint.md
           - JSON Repair: user-guide/ai-json-repair.md
           - Cost Ledger: user-guide/ai-cost-ledger.md
-      - Orchestration & Runtime:
-          - Realtime Sessions: user-guide/ai-realtime.md
-          - Agent Collaboration: user-guide/ai-agent-collaboration.md
-      - Reference:
-          - AI Product Engineering Overview: user-guide/ai-product-engineering.md
-          - Component Maturity Model: user-guide/component-maturity.md
   - Recipes:
       - CLI Tool: recipes/cli-tool.md
-      - RAG Evaluation Runner: recipes/rag-eval-runner.md
+      - Production Evaluation Pipeline: recipes/rag-eval-runner.md
       - AI Telemetry: recipes/ai-telemetry.md
-      - Policy-Governed LLM Flow: recipes/policy-gateway.md
-      - Agent Collaboration Runtime: recipes/agent-collaboration-runtime.md
+      - Runtime Governance Pattern: recipes/policy-gateway.md
+      - Observable Runtime Routing: recipes/agent-collaboration-runtime.md
       - Policy + Collaboration E2E: recipes/policy-collaboration-e2e.md
-  - API Reference: api.md
+  - Reference:
+      - API Reference: api.md
+      - AI Product Engineering Overview: user-guide/ai-product-engineering.md
+      - Component Maturity Model: user-guide/component-maturity.md
+  - Roadmap: roadmap.md
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -100,6 +107,8 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/inference-stack-llc/electripy-studio
+      link: https://github.com/inference-stack-llc/electripy-ai
     - icon: fontawesome/brands/python
-      link: https://pypi.org/project/electripy-studio/
+      link: https://pypi.org/project/electripy-ai/
+    - icon: fontawesome/solid/globe
+      link: https://electripy.ai

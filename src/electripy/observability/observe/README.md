@@ -6,7 +6,7 @@ invocations, workflow steps, policy checks, agent spans, and MCP
 interactions.
 
 It is built around OpenTelemetry-aligned concepts while remaining
-provider-neutral and consistent with ElectriPy Studio's Ports &
+provider-neutral and consistent with ElectriPy AI's Ports &
 Adapters architecture.
 
 ## Structure

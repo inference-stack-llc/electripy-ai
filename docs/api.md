@@ -1,6 +1,6 @@
 # API Reference
 
-Complete API reference for ElectriPy modules.
+Complete API reference for ElectriPy AI modules.
 
 ## Core Module
 

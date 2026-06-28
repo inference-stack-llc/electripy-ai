@@ -1,45 +1,50 @@
-# ElectriPy Studio
+# ElectriPy AI
 
-**The Python substrate for observable agent engineering.**
+**The Open Source AI Application Runtime.**
+
+Everything required between prototype and production.
 
 ## Overview
 
-ElectriPy Studio is a curated collection of production-grade Python components for building observable, testable, and governable agent systems. It provides composable infrastructure for LLM routing, evaluation, policy enforcement, MCP integration, skills packaging, realtime session orchestration, and telemetry-aware runtime execution — all without adopting a framework.
+ElectriPy AI is the open source AI Application Runtime for building reliable, observable, governable, and evaluable production AI systems. It provides composable runtime infrastructure for reliability, observability, governance, evaluation, orchestration, and model runtime execution — all without adopting a framework.
 
 > Import the pieces you need; leave the rest.
 
 ## Status
 
-- **Maturity**: Early alpha — APIs may still evolve. Core components, agent infrastructure, and the full observability/governance/evaluation stack are implemented and tested.
+- **Maturity**: Early alpha — APIs may still evolve. Core runtime domains are implemented and tested.
 - **Test suite**: 1,000+ offline, deterministic tests.
 - **Versioning**: SemVer at `v0.x` — expect breaking changes until `v1.0`.
 
-## Package map
+See the [LSAS Architecture](lsas.md) for the layered systems model behind ElectriPy AI.
 
-### Agent infrastructure
+## Runtime Domains
 
-| Package | Purpose |
-|---------|---------|
-| `llm_gateway` | Provider-agnostic sync/async LLM clients with request/response hooks |
-| `provider_adapters` | OpenAI, Anthropic, Ollama, and generic HTTP-JSON adapters |
-| `workload_router` | Cost/latency/capability-aware model routing |
-| `fallback_chain` | Ranked provider failover with metadata tracking |
-| `batch_complete` | Concurrent LLM fan-out with bounded concurrency |
-| `structured_output` | Pydantic extraction from LLM text with auto-retry |
-| `llm_cache` | Response caching (in-memory LRU, SQLite WAL) |
-| `replay_tape` | Record, replay, and diff LLM interactions |
+### Reliability
 
-### Observability & governance
+| Component | Purpose |
+|-----------|---------|
+| Circuit breaker | Stop cascading failures before they propagate |
+| Retry (sync/async) | Configurable backoff with exception scoping |
+| Fallback chain | Ranked provider failover with metadata tracking |
+| Rate limiter | Token bucket algorithm, async-native |
+
+### Observability
 
 | Package | Purpose |
 |---------|---------|
-| `observe` | OpenTelemetry-aligned tracing with AI-specific span kinds |
+| `observe` | OpenTelemetry-aligned tracing with AI-specific span kinds (LLM, agent, tool, retrieval, policy, MCP) |
 | `telemetry` | Provider-agnostic telemetry adapters (JSONL, OpenTelemetry) |
-| `policy` | Enterprise policy engine — rules, approval workflows, escalation chains |
-| `policy_gateway` | Request/response guardrails with regex-based detection and multi-stage enforcement |
 | `sensitive_data_scanner` | PII and secret detection with 9+ built-in patterns |
 
-### Evaluation & quality
+### Governance
+
+| Package | Purpose |
+|---------|---------|
+| `policy` | Enterprise policy engine — rules, approval workflows, escalation chains |
+| `policy_gateway` | Request/response guardrails with regex-based detection and multi-stage enforcement |
+
+### Evaluation
 
 | Package | Purpose |
 |---------|---------|
@@ -47,25 +52,28 @@ ElectriPy Studio is a curated collection of production-grade Python components f
 | `eval_assertions` | Pytest-native assertion helpers for LLM output validation |
 | `rag_eval_runner` | Retrieval benchmarking with precision/recall/MRR metrics |
 
-### Composition & packaging
+### Orchestration
 
 | Package | Purpose |
 |---------|---------|
-| `skills` | Versioned skill packages with manifest-driven composition |
-| `mcp` | Strongly typed Model Context Protocol toolkit |
-| `prompt_engine` | Template composition and few-shot example management |
-| `tool_registry` | Declarative tool definitions with JSON schema generation |
-
-### Orchestration & runtime
-
-| Package | Purpose |
-|---------|---------|
+| `workload_router` | Cost/latency/capability-aware model routing |
 | `realtime` | Session lifecycle — event sequencing, tool calls, interruption, backpressure |
+| `mcp` | Strongly typed Model Context Protocol |
+| `skills` | Versioned skill packages with manifest-driven composition |
 | `agent_collaboration` | Bounded multi-agent handoff with hop limits and policy integration |
-| `streaming_chat` | Sync/async stream chunk primitives |
-| `agent_runtime` | Deterministic tool-plan execution |
 
-### Core infrastructure
+### Model Runtime
+
+| Package | Purpose |
+|---------|---------|
+| `llm_gateway` | Provider-agnostic sync/async LLM clients with request/response hooks |
+| `provider_adapters` | OpenAI, Anthropic, Ollama, and generic HTTP-JSON adapters |
+| `fallback_chain` | Ranked provider failover with metadata tracking |
+| `structured_output` | Pydantic extraction from LLM text with auto-retry |
+| `llm_cache` | Response caching (in-memory LRU, SQLite WAL) |
+| `replay_tape` | Record, replay, and diff LLM interactions |
+
+### Core Infrastructure
 
 | Package | Purpose |
 |---------|---------|
@@ -74,27 +82,14 @@ ElectriPy Studio is a curated collection of production-grade Python components f
 | `io` | JSONL read/write utilities |
 | `cli` | CLI commands, health checks, and demo showcase |
 
-## Documentation map
-
-![Documentation and recipes layout](images/docs_and_recipes.png)
-
-## Quick links
+## Quick Links
 
 ### Getting started
 
 - [Installation](getting-started/installation.md)
 - [Quickstart Guide](getting-started/quickstart.md)
-
-### Agent infrastructure
-
-- [LLM Gateway](user-guide/ai-llm-gateway.md)
-- [Provider Adapters](user-guide/ai-provider-adapters.md)
-- [Workload Router](user-guide/ai-workload-router.md)
-- [Fallback Chain](user-guide/ai-fallback-chain.md)
-- [Batch Complete](user-guide/ai-batch-complete.md)
-- [Structured Output](user-guide/ai-structured-output.md)
-- [LLM Cache](user-guide/ai-llm-cache.md)
-- [Replay Tape](user-guide/ai-replay-tape.md)
+- [LSAS Architecture](lsas.md)
+- [Manifesto](manifesto.md)
 
 ### Observability & governance
 
@@ -110,17 +105,22 @@ ElectriPy Studio is a curated collection of production-grade Python components f
 - [Eval Assertions](user-guide/ai-eval-assertions.md)
 - [RAG Evaluation Runner](user-guide/ai-rag-eval-runner.md)
 
-### Composition & packaging
+### Model Runtime
 
-- [Skills](user-guide/ai-skills.md)
-- [MCP Toolkit](user-guide/ai-mcp.md)
-- [Prompt Fingerprint](user-guide/ai-prompt-fingerprint.md)
-- [JSON Repair](user-guide/ai-json-repair.md)
+- [LLM Gateway](user-guide/ai-llm-gateway.md)
+- [Provider Adapters](user-guide/ai-provider-adapters.md)
+- [Workload Router](user-guide/ai-workload-router.md)
+- [Fallback Chain](user-guide/ai-fallback-chain.md)
+- [Structured Output](user-guide/ai-structured-output.md)
+- [LLM Cache](user-guide/ai-llm-cache.md)
+- [Replay Tape](user-guide/ai-replay-tape.md)
 
-### Orchestration & runtime
+### Orchestration
 
 - [Realtime Sessions](user-guide/ai-realtime.md)
 - [Agent Collaboration](user-guide/ai-agent-collaboration.md)
+- [MCP](user-guide/ai-mcp.md)
+- [Skills](user-guide/ai-skills.md)
 - [Cost Ledger](user-guide/ai-cost-ledger.md)
 
 ### Foundation
@@ -133,9 +133,8 @@ ElectriPy Studio is a curated collection of production-grade Python components f
 
 ### Reference
 
-- [AI Product Engineering Overview](user-guide/ai-product-engineering.md)
-- [Component Maturity Model](user-guide/component-maturity.md)
 - [API Reference](api.md)
+- [Component Maturity Model](user-guide/component-maturity.md)
 
 ## Requirements
 
@@ -144,4 +143,6 @@ ElectriPy Studio is a curated collection of production-grade Python components f
 
 ## License
 
-MIT License — see [LICENSE](https://github.com/inference-stack-llc/electripy-studio/blob/main/LICENSE) for details.
+MIT License.
+
+MIT License — see [LICENSE](https://github.com/inference-stack-llc/electripy-ai/blob/main/LICENSE) for details.

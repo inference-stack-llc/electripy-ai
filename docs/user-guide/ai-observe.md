@@ -6,7 +6,7 @@ invocations, workflow steps, policy checks, agent spans, and MCP
 interactions.
 
 It is built around OpenTelemetry-aligned concepts while remaining
-**provider-neutral** and consistent with ElectriPy Studio's Ports &
+**provider-neutral** and consistent with ElectriPy AI's Ports &
 Adapters architecture.
 
 ## When to use it
@@ -56,10 +56,10 @@ Use the Observe package when you want:
 
 ## Installation
 
-The Observe package is included with ElectriPy Studio:
+The Observe package is included with ElectriPy AI:
 
 ```bash
-pip install electripy-studio
+pip install electripy-ai
 ```
 
 For OpenTelemetry integration, install the optional extra:

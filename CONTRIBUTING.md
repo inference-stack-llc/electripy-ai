@@ -1,12 +1,24 @@
-# Contributing to ElectriPy Studio
+# Contributing to ElectriPy AI
 
 Thank you for your interest in contributing! This guide covers everything you need to get started.
+
+## Philosophy
+
+Contributors should preserve the runtime-first philosophy:
+
+- **Composable primitives** — each component should work standalone; avoid hidden coupling.
+- **Typed APIs** — strict typing, frozen dataclasses, `__all__` exports, Protocol-based interfaces.
+- **No framework lock-in** — ElectriPy AI should compose into any architecture, not require adoption of one.
+- **Deterministic tests** — all tests should run offline, without API keys, with stable results.
+- **Production-minded defaults** — safe logging posture, redaction seams, error isolation.
+- **Observable execution** — tracing and telemetry hooks should be built in, not bolted on.
+- **Governance-ready design** — policy integration points should be first-class, not afterthoughts.
 
 ## Development setup
 
 ```bash
-git clone https://github.com/inference-stack-llc/electripy-studio.git
-cd electripy-studio
+git clone https://github.com/inference-stack-llc/electripy-ai.git
+cd electripy-ai
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 ```
@@ -55,7 +67,7 @@ When adding a new module, mirror this structure.
 
 ## Reporting issues
 
-Open a [GitHub issue](https://github.com/inference-stack-llc/electripy-studio/issues) with:
+Open a [GitHub issue](https://github.com/inference-stack-llc/electripy-ai/issues) with:
 
 - A minimal reproduction or failing test case
 - Python version and OS

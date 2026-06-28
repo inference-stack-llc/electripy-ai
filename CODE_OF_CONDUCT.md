@@ -22,7 +22,7 @@ Examples of unacceptable behaviour:
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported to the project maintainers at **[electripy@inferencestack.dev](mailto:electripy@inferencestack.dev)**. All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported to the project maintainers at **[matt.vegas@inference-stack.com](mailto:matt.vegas@inference-stack.com)**. All complaints will be reviewed and investigated promptly and fairly.
 
 ## Attribution
 

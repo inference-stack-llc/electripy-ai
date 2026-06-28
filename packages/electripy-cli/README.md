@@ -1,17 +1,17 @@
 # @electripy/cli
 
-NPM wrapper package for ElectriPy CLI tools.
+NPM wrapper package for ElectriPy AI CLI tools.
 
 ## Status
 
-**This is a placeholder package.** The actual ElectriPy tools are written in Python.
+**This is a placeholder package.** The actual ElectriPy AI tools are written in Python.
 
 ## Installation
 
-To use ElectriPy, install the Python package:
+To use ElectriPy AI, install the Python package:
 
 ```bash
-pip install electripy
+pip install electripy-ai
 ```
 
 ## Usage
@@ -27,7 +27,9 @@ electripy --help    # Show help
 ## Documentation
 
 See the main documentation at:
-https://github.com/inference-stack-llc/electripy-studio
+https://electripy.ai/docs
+
+GitHub: https://github.com/inference-stack-llc/electripy-ai
 
 ## License
 

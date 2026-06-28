@@ -3,24 +3,25 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "electripy-studio"
+name = "electripy-ai"
 version = "0.4.0"
-description = "The Python substrate for observable agent engineering — LLM routing, policy governance, MCP integration, evaluation, skills packaging, realtime orchestration, and structured tracing."
+description = "Open source AI Application Runtime for reliable, observable, and governable production AI systems."
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [
-    {name = "Inference Stack", email = "team@inferencestack.com"},
+    {name = "ElectriPy AI Contributors", email = "matt.vegas@inference-stack.com"},
 ]
 keywords = [
-    "ai", "llm", "rag", "agent", "agent-engineering", "mcp",
-    "observability", "tracing", "opentelemetry", "evaluation", "telemetry",
-    "guardrails", "policy", "governance", "skills", "realtime",
+    "ai", "llm", "runtime", "observability", "governance", "reliability",
+    "evals", "mcp", "agents", "open-telemetry", "production-ai", "lsas",
+    "rag", "agent-engineering", "tracing", "evaluation", "telemetry",
+    "guardrails", "policy", "skills", "realtime",
     "structured-output", "llmops", "ai-engineering", "openai", "anthropic",
     "ollama", "circuit-breaker", "routing", "workload-router",
     "json-repair", "pii-detection", "cost-tracking", "prompt-engineering",
     "caching", "batch-processing", "fallback", "resilience",
-    "production", "toolkit", "mlops",
+    "production", "mlops",
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -64,11 +65,11 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/inference-stack-llc/electripy-studio"
-Documentation = "https://github.com/inference-stack-llc/electripy-studio/tree/main/docs"
-Repository = "https://github.com/inference-stack-llc/electripy-studio"
-Changelog = "https://github.com/inference-stack-llc/electripy-studio/blob/main/CHANGELOG.md"
-Issues = "https://github.com/inference-stack-llc/electripy-studio/issues"
+Homepage = "https://electripy.ai"
+Documentation = "https://electripy.ai/docs"
+Repository = "https://github.com/inference-stack-llc/electripy-ai"
+Changelog = "https://github.com/inference-stack-llc/electripy-ai/blob/main/CHANGELOG.md"
+Issues = "https://github.com/inference-stack-llc/electripy-ai/issues"
 
 [project.scripts]
 electripy = "electripy.cli:app"

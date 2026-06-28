@@ -1,6 +1,8 @@
-# Recipe: Building a CLI Tool
+# Recipe: Building a Production CLI Tool
 
-Learn how to build a production-ready CLI tool using ElectriPy components.
+Learn how to build a production-ready CLI tool using ElectriPy AI runtime components.
+
+> **When to use this:** You need a CLI interface around data processing, AI pipelines, or batch workloads, and want retry, rate limiting, and health checks built in from the start.
 
 ## Overview
 

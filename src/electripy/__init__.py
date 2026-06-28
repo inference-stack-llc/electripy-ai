@@ -1,4 +1,4 @@
-"""ElectriPy - The Python substrate for observable agent engineering."""
+"""ElectriPy AI — The Open Source AI Application Runtime."""
 
 __version__ = "0.1.0"
 

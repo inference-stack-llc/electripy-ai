@@ -11,7 +11,7 @@
 
 **Please do not open a public issue for security vulnerabilities.**
 
-Instead, email **[security@inferencestack.dev](mailto:security@inferencestack.dev)** with:
+Instead, email **[matt.vegas@inference-stack.com](mailto:matt.vegas@inference-stack.com)** with:
 
 1. A description of the vulnerability
 2. Steps to reproduce

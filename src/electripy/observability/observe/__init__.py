@@ -1,10 +1,10 @@
-"""Structured observability for AI, agent, and tool workloads.
+git remote set-url origin https://github.com/inference-stack-llc/electripy-ai.git"""Structured observability for AI, agent, and tool workloads.
 
 The ``observe`` package provides a production-ready tracing and
 instrumentation layer for LLM calls, retrieval operations, tool
 invocations, workflow steps, policy checks, agent spans, and MCP
 interactions.  It is built around OpenTelemetry-aligned concepts while
-remaining provider-neutral and consistent with ElectriPy Studio's
+remaining provider-neutral and consistent with ElectriPy AI's
 Ports & Adapters architecture.
 
 Key design goals:

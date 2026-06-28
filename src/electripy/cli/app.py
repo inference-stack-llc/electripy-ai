@@ -14,7 +14,7 @@ from electripy.core.logging import setup_logging
 
 app = typer.Typer(
     name="electripy",
-    help="ElectriPy - The Python substrate for observable agent engineering",
+    help="ElectriPy AI — The Open Source AI Application Runtime",
     no_args_is_help=True,
 )
 

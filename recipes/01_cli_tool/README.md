@@ -1,6 +1,6 @@
 # CLI Tool Recipe
 
-This recipe demonstrates building a production-ready CLI tool using ElectriPy components.
+This recipe demonstrates building a production-ready CLI tool using ElectriPy AI runtime components.
 
 ## Overview
 
@@ -19,8 +19,10 @@ This example shows how to:
 
 ## Quick Start
 
-1. Install ElectriPy:
+1. Install ElectriPy AI:
    ```bash
+   pip install electripy-ai
+   # Or from source:
    cd ../..
    pip install -e .
    ```

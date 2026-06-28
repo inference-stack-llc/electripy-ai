@@ -5,19 +5,21 @@
 - Python 3.11 or higher
 - pip, poetry, or uv for package management
 
-## Install from PyPI (when available)
+## Install from PyPI
 
 ```bash
-pip install electripy
+pip install electripy-ai
 ```
+
+> **Package rename in progress.** Current builds may still be published under the previous package name (`electripy-studio`) during migration. The Python import namespace remains `electripy` in all cases.
 
 ## Install from Source
 
 Clone the repository and install in editable mode:
 
 ```bash
-git clone https://github.com/inference-stack-llc/electripy-studio.git
-cd electripy-studio
+git clone https://github.com/inference-stack-llc/electripy-ai.git
+cd electripy-ai
 pip install -e .
 ```
 
@@ -46,7 +48,7 @@ mkdocs serve
 
 ## Verify Installation
 
-Check that ElectriPy is properly installed:
+Check that ElectriPy AI is properly installed:
 
 ```bash
 electripy doctor

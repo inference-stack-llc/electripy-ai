@@ -1,6 +1,6 @@
 # RAG Indexing & Retrieval Kit
 
-This component provides a production-minded, framework-agnostic toolkit for
+This component provides a production-minded, framework-agnostic developer utility for
 retrieval-augmented generation (RAG). It focuses on deterministic document
 ingestion and chunking, batching and retrying embeddings, pluggable vector
 stores, and simple retrieval evaluation metrics.

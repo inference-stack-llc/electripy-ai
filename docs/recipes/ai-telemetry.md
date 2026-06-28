@@ -1,7 +1,8 @@
 # Recipe: AI Telemetry
 
-This recipe shows how to wire the AI Telemetry component into an
-application that uses HTTP resilience and the LLM Gateway.
+This recipe shows how to wire the ElectriPy AI Telemetry component into an application that uses HTTP resilience and the LLM Gateway.
+
+> **When to use this:** You need correlation IDs, structured telemetry events, and exportable traces for HTTP retries, LLM calls, and policy decisions — without mandating a specific observability backend.
 
 ## Scenario
 

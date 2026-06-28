@@ -5,6 +5,8 @@ This recipe shows a small, end-to-end example of using the
 provider-agnostic way, with retries, token budgeting, and structured
 output.
 
+This is part of the **ElectriPy AI** runtime — the Model Runtime layer of the LSAS Architecture.
+
 The example intentionally uses a fake adapter so it can be run offline
 without any real provider credentials.
 

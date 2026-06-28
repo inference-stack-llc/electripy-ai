@@ -1,20 +1,21 @@
 {
   "name": "@electripy/cli",
   "version": "0.1.0",
-  "description": "NPM wrapper for ElectriPy CLI - The Python substrate for observable agent engineering",
+  "description": "NPM wrapper for ElectriPy AI CLI — The Open Source AI Application Runtime",
   "keywords": [
     "electripy",
     "cli",
     "python",
-    "utilities"
+    "ai-runtime",
+    "production-ai"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/inference-stack-llc/electripy-studio.git",
+    "url": "https://github.com/inference-stack-llc/electripy-ai.git",
     "directory": "packages/electripy-cli"
   },
   "license": "MIT",
-  "author": "Inference Stack",
+  "author": "ElectriPy AI Contributors",
   "main": "index.js",
   "scripts": {
     "test": "echo \"No tests yet\" && exit 0"

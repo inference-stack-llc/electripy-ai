@@ -1,6 +1,8 @@
-# Recipe: Policy-Governed LLM + Tool Flow
+# Runtime Governance Pattern: Policy-Governed LLM + Tool Flow
 
-This recipe shows how to enforce deterministic policy decisions around LLM calls and tool invocations.
+This recipe shows how to enforce deterministic policy decisions around LLM calls and tool invocations using the ElectriPy AI runtime.
+
+> **When to use this:** Your AI system handles sensitive data, routes high-risk tool calls, or requires auditable decisions before and after model execution.
 
 ## Scenario
 

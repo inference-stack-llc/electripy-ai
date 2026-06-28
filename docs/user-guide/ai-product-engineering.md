@@ -1,6 +1,6 @@
 # AI Product Engineering Utilities
 
-ElectriPy Studio includes lightweight, composable Python components for advanced AI product development.
+ElectriPy AI includes lightweight, composable Python runtime components for advanced AI product development.
 
 ## What this adds
 

@@ -1,7 +1,8 @@
-# Recipe: RAG Evaluation Runner
+# Production Evaluation Pipeline: RAG Evaluation Runner
 
-This recipe shows how to run the RAG Evaluation Runner end-to-end to
-benchmark retrieval quality and gate CI based on minimum metrics.
+This recipe shows how to run the ElectriPy AI RAG Evaluation Runner end-to-end to benchmark retrieval quality and gate CI based on minimum metrics.
+
+> **When to use this:** You need to enforce retrieval quality standards before deployment, detect regression across chunking or embedding changes, and generate structured CI reports.
 
 ## Scenario
 

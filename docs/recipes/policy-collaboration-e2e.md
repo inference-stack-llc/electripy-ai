@@ -1,4 +1,4 @@
-# Recipe: Policy + Collaboration End-to-End
+# Policy + Collaboration End-to-End
 
 This recipe demonstrates a complete local flow that combines:
 
@@ -6,6 +6,8 @@ This recipe demonstrates a complete local flow that combines:
 - deterministic policy decisions
 - bounded agent collaboration
 - telemetry event capture
+
+> **When to use this:** You want a single runnable proof-of-concept that exercises ElectriPy AI's governance, orchestration, and observability layers together — offline, no API keys required.
 
 ## Scenario
 

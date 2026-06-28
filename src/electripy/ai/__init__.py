@@ -3,7 +3,7 @@ from __future__ import annotations
 """ElectriPy AI namespace.
 
 Purpose:
-  - Group AI-related components for ElectriPy Studio.
+  - Group AI runtime components for ElectriPy AI.
 
 Guarantees:
   - Public APIs for each AI submodule are re-exported from their own packages.
