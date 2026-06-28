@@ -1,4 +1,4 @@
-git remote set-url origin https://github.com/inference-stack-llc/electripy-ai.git"""Structured observability for AI, agent, and tool workloads.
+"""Structured observability for AI, agent, and tool workloads.
 
 The ``observe`` package provides a production-ready tracing and
 instrumentation layer for LLM calls, retrieval operations, tool

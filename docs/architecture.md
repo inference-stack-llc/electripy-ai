@@ -205,4 +205,4 @@ All ElectriPy AI components are designed for offline, deterministic testing:
 ---
 
 *See also: [LSAS Architecture](lsas.md)*  
-*See also: [MANIFESTO.md](../MANIFESTO.md)*
+*See also: [Manifesto](manifesto.md)*

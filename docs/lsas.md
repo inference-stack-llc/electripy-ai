@@ -205,5 +205,5 @@ Import the layers you need. The rest stays out of the way.
 
 ---
 
-*See also: [MANIFESTO.md](../MANIFESTO.md) — AI Needs Infrastructure*  
+*See also: [Manifesto](manifesto.md) — AI Needs Infrastructure*  
 *See also: [Architecture overview](architecture.md)*
