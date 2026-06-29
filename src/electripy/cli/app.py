@@ -8,6 +8,7 @@ from rich.console import Console
 from rich.table import Table
 
 from electripy.cli.demo import app as demo_app
+from electripy.cli.lsas import app as lsas_app
 from electripy.cli.rag import app as rag_app
 from electripy.core.config import Config
 from electripy.core.logging import setup_logging
@@ -19,6 +20,7 @@ app = typer.Typer(
 )
 
 app.add_typer(demo_app, name="demo")
+app.add_typer(lsas_app, name="lsas")
 app.add_typer(rag_app, name="rag")
 
 console = Console()
