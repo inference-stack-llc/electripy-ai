@@ -6,7 +6,7 @@ Everything required between prototype and production.
 
 ## Overview
 
-ElectriPy AI is the open source AI Application Runtime for building reliable, observable, governable, and evaluable production AI systems. It provides composable runtime infrastructure for reliability, observability, governance, evaluation, orchestration, and model runtime execution — all without adopting a framework.
+ElectriPy AI is the open source AI Application Runtime for operating reliable, observable, governable, and evaluable production AI systems. It provides composable runtime infrastructure for reliability, observability, governance, evaluation, orchestration, and model runtime execution — all without adopting a framework.
 
 > Import the pieces you need; leave the rest.
 
@@ -101,7 +101,7 @@ See the [LSAS Architecture](lsas.md) for the layered systems model behind Electr
 
 ### Evaluation & quality
 
-- [Evals Framework](user-guide/ai-evals.md)
+- [Evaluation Pipeline](user-guide/ai-evals.md)
 - [Eval Assertions](user-guide/ai-eval-assertions.md)
 - [RAG Evaluation Runner](user-guide/ai-rag-eval-runner.md)
 

@@ -31,9 +31,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - **Observe** — OpenTelemetry-aligned structured tracing with AI-specific span kinds (LLM, agent, tool, retrieval, policy, MCP), context propagation, and provider-agnostic tracer ports.
-- **MCP Toolkit** — strongly typed Model Context Protocol clients, server adapters, and tool definitions with JSON schema generation.
+- **MCP Runtime** — strongly typed Model Context Protocol clients, server adapters, and tool definitions with JSON schema generation.
 - **Workload Router** — policy-driven, cost/latency/capability-aware model selection and routing engine with pluggable scoring strategies.
-- **Evals** — dataset-driven evaluation framework with pluggable scorers, baseline comparison, drift detection, and CI-friendly JSON reporting.
+- **Evals** — dataset-driven evaluation pipeline with pluggable scorers, baseline comparison, drift detection, and CI-friendly JSON reporting.
 - **Policy Engine** — enterprise policy engine with subject/resource/action rules, approval workflows, evidence requirements, escalation chains, and audit logging.
 - **Skills** — versioned, validated skill packages with manifest-driven composition, `{{variable}}` template rendering, and asset resolution.
 - **Realtime** — session lifecycle orchestration with event sequencing, tool-call dispatch, interruption handling, backpressure directives, and transport abstraction.

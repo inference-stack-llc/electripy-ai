@@ -9,7 +9,7 @@ The following runtime domains are implemented and tested:
 - ✅ Reliability — circuit breaker, retry, rate limiting, fallback chain
 - ✅ Observability — structured tracing (observe), telemetry adapters, cost ledger, prompt fingerprint, sensitive data scanner
 - ✅ Governance — policy engine, policy gateway
-- ✅ Evaluation — evals framework, eval assertions, RAG eval runner
+- ✅ Evaluation — evaluation pipeline, eval assertions, RAG eval runner
 - ✅ Orchestration — workload router, realtime sessions, agent collaboration, skills, MCP
 - ✅ Model Runtime — LLM gateway, provider adapters, structured output, LLM cache, replay tape
 

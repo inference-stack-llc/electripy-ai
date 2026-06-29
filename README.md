@@ -4,9 +4,9 @@
 
 # ElectriPy AI
 
-**The Open Source AI Application Runtime.**
+**Open-source AI Application Runtime for reliable, observable, and governable production AI systems.**
 
-Everything required between prototype and production.
+Most AI frameworks help you build AI. ElectriPy AI helps you operate AI in production.
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -19,13 +19,13 @@ Everything required between prototype and production.
 
 ## What is ElectriPy AI?
 
-ElectriPy AI is the open source AI Application Runtime for building reliable, observable, governable, and evaluable production AI systems.
+ElectriPy AI is the open-source AI Application Runtime — the runtime implementation of LSAS (Layered Systems Architecture for AI Systems).
 
-Most AI frameworks help you build agents, workflows, RAG pipelines, and tool integrations.
+Most AI frameworks own the orchestration and agent layers. They stop there. Everything below — reliability, observability, governance, evaluation, and model runtime execution — gets rebuilt by hand on every team, in every project, every time a prototype moves to production.
 
-ElectriPy AI provides the runtime infrastructure those systems need once they touch production: reliability primitives, OpenTelemetry-aware observability, policy enforcement, evaluation pipelines, routing, MCP integration, reusable skills, and provider-neutral execution.
+ElectriPy AI implements those layers as composable, open-source runtime primitives. Import what you need; leave the rest.
 
-## Why ElectriPy AI Exists
+## The Prototype Trap
 
 AI prototypes are easy to demo and hard to operate.
 
@@ -45,18 +45,26 @@ Once AI systems reach production, teams need:
 - tool health visibility
 - runtime controls
 
-ElectriPy AI exists to make those capabilities composable and open source.
+Most teams rebuild this infrastructure for every project. It stays undocumented. It breaks at scale.
 
-## Not Another Framework
+ElectriPy AI exists to make those capabilities composable, open source, and production-ready from day one.
 
-ElectriPy AI is not an agent framework.  
-ElectriPy AI is not a RAG framework.  
-ElectriPy AI is not an MCP wrapper.  
-ElectriPy AI is not a chatbot toolkit.
+## Where ElectriPy AI Fits
 
-It is the runtime layer underneath production AI applications.
+ElectriPy AI is not a replacement for orchestration frameworks — it is the production runtime layer underneath them.
 
-Use it with LangChain, LangGraph, LlamaIndex, AutoGen, CrewAI, Semantic Kernel, custom agents, or your own architecture.
+| Tool | Category | Role |
+|------|----------|------|
+| LangChain | Orchestration Framework | Build AI chains and agents |
+| LangGraph | Agent Workflow Framework | Build stateful agent graphs |
+| LlamaIndex | RAG Framework | Build retrieval pipelines |
+| CrewAI | Agent Coordination | Build multi-agent crews |
+| AutoGen | Agent Collaboration | Build conversational agent systems |
+| **ElectriPy AI** | **AI Application Runtime** | **Operate AI in production** |
+
+ElectriPy AI is designed to run **alongside** these frameworks, not replace them.
+
+> **Use the framework you already have. Add the runtime it doesn't give you.**
 
 ---
 
@@ -65,8 +73,6 @@ Use it with LangChain, LangGraph, LlamaIndex, AutoGen, CrewAI, Semantic Kernel, 
 ```bash
 pip install electripy-ai
 ```
-
-> **Package rename in progress.** Current builds may still be published under the previous package name during migration. The Python import namespace remains `electripy` in all cases.
 
 ```python
 from electripy import Config, get_logger
@@ -149,9 +155,23 @@ See [recipes/03_policy_collaboration/](https://github.com/inference-stack-llc/el
 
 ## LSAS Architecture
 
-LSAS Architecture is the layered systems architecture behind ElectriPy AI.
+LSAS — Layered Systems Architecture for AI Systems — is the architectural model behind ElectriPy AI. It defines nine layers of concern for production AI systems and maps exactly where each belongs.
 
-LSAS (Layered Systems Architecture for AI Systems) defines where production AI concerns belong. ElectriPy AI implements runtime primitives for those layers.
+```
+L09  Application      → Business logic, UX, product surface
+L08  Orchestration    → Agent routing, session flow, multi-agent handoffs
+L07  Memory           → Conversation history, context window management
+L06  Knowledge        → Retrieval, RAG, document indexing
+L05  Tool Integration → MCP, function calls, tool registry
+L04  Model Runtime    → LLM gateway, provider adapters, structured output, caching
+L03  Reliability      → Circuit breakers, retries, fallbacks, rate limiting
+L02  Observability    → Tracing, spans, telemetry, redaction, cost metadata
+L01  Governance       → Policy engine, policy gateway, approvals, audit trails
+```
+
+Most AI frameworks own L08. Sometimes L04. **The infrastructure layers (L01–L03, L05) are what teams rebuild by hand, project after project.**
+
+ElectriPy AI implements runtime primitives for L01 through L06 and the gateway layer for L04.
 
 | Layer | Name | Production concern |
 |-------|------|--------------------|
@@ -314,7 +334,7 @@ graph TD
 
 | Package | Purpose |
 |---------|---------|
-| `evals` | Dataset-driven evaluation framework with scoring, baseline comparison, drift detection, and CI-friendly reporting |
+| `evals` | Dataset-driven evaluation pipeline with scoring, baseline comparison, drift detection, and CI-friendly reporting |
 | `eval_assertions` | Pytest-native assertion helpers (keyword, regex, JSON schema, predicate, length) for LLM output validation |
 | `rag_eval_runner` | Retrieval benchmarking with precision/recall/MRR metrics and drift detection |
 
@@ -361,8 +381,8 @@ graph TD
 
 ElectriPy AI is **not a framework** — it is composable runtime infrastructure. Import the pieces you need; leave the rest.
 
-| Library | Overlap | ElectriPy AI's edge |
-|---------|---------|---------------------|
+| Tool | Overlap | ElectriPy AI's edge |
+|------|---------|---------------------|
 | [LiteLLM](https://github.com/BerriAI/litellm) | Provider-agnostic LLM gateway | Bundles policy hooks, observability, structured output, and workload routing inline — no proxy server |
 | [Guardrails AI](https://github.com/guardrails-ai/guardrails) | Input/output validation | Lighter-weight, composable policy engine + gateway — no XML DSL or hosted dependency |
 | [CrewAI](https://github.com/crewAIInc/crewAI) / [AutoGen](https://github.com/microsoft/autogen) | Multi-agent orchestration | Bounded, deterministic collaboration with hop limits; runtime building blocks, not a framework |
@@ -385,16 +405,17 @@ ElectriPy AI is alpha software under active development.
 
 ## ElectriPy Cloud
 
-ElectriPy Cloud is planned as the hosted operational layer for teams using ElectriPy AI in production.
+ElectriPy OSS is and will remain MIT licensed, open source, and fully self-hosted. Production capable on its own.
+
+ElectriPy Cloud is planned as the hosted operational layer — the same relationship as Terraform to Terraform Cloud, Prometheus to Grafana Cloud, or Sentry to the Sentry hosted platform. The runtime instruments your systems. The cloud surfaces that data as reliability scores, trace replays, policy analytics, and cost dashboards.
 
 Planned capabilities:
-- hosted traces and spans
-- agent and session replay
-- reliability scoring
-- policy analytics
-- cost analytics
-- operational dashboards
-- team workspaces
+- Hosted traces and session timelines
+- Reliability scoring and incident correlation
+- Policy analytics and governance dashboards
+- Cost analytics and attribution
+- Agent and session replay
+- Operational dashboards and team workspaces
 
 *ElectriPy Cloud does not exist yet. No timeline is implied.*
 
@@ -403,7 +424,7 @@ Planned capabilities:
 ## Project Structure
 
 ```
-electripy-studio/              ← Current repository location. Migration planned.
+electripy-ai/
 ├── src/electripy/
 │   ├── core/                  # Config, logging, errors, typing
 │   ├── concurrency/           # Retry, rate limiting, circuit breaker
