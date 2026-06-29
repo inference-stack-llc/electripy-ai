@@ -36,7 +36,7 @@ HIPAA_PACK = PolicyPack(
         other=1.0,
     ),
     thresholds=RiskThresholds(
-        warn=3.0,  # one MEDIUM PHI finding (5 × 3 = 15 > 3) → warn
+        warn=3.0,  # a single MEDIUM PHI finding scores 5 × 3 = 15, far exceeding warn (3) → warns
         redact=10.0,
         block=25.0,
         escalate=40.0,

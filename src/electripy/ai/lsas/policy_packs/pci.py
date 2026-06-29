@@ -36,7 +36,7 @@ PCI_PACK = PolicyPack(
     thresholds=RiskThresholds(
         warn=5.0,
         redact=10.0,
-        block=20.0,  # one CRITICAL PCI (20 × 3 = 60) → block
+        block=20.0,  # a CRITICAL PCI finding scores 20 × 3 = 60, which exceeds escalate (45); block threshold is set for lesser violations
         escalate=45.0,
     ),
     # Restrict to payment-relevant domains only

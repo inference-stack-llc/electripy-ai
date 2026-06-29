@@ -52,7 +52,7 @@ _PATTERNS: list[tuple[str, re.Pattern[str], Severity, str]] = [
         "SECRET_BEARER_TOKEN",
         re.compile(r"\bBearer\s+[A-Za-z0-9\-._~+/]{20,}={0,2}\b", re.IGNORECASE),
         Severity.HIGH,
-        "****** detected in text",
+        "Bearer token detected in text",
     ),
     (
         "SECRET_GENERIC_KEY",
