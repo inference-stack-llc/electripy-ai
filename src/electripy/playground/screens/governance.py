@@ -6,7 +6,7 @@ from textual import on
 from textual.app import ComposeResult
 from textual.containers import Horizontal, Vertical
 from textual.widget import Widget
-from textual.widgets import Button, DataTable, Input, Label, RichLog, Static, TextArea
+from textual.widgets import Button, DataTable, Label, RichLog, Static, TextArea
 
 from electripy.ai.policy_gateway import (
     PolicyAction,

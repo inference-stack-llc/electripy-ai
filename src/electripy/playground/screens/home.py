@@ -6,7 +6,6 @@ from textual.app import ComposeResult
 from textual.widget import Widget
 from textual.widgets import Label, Static
 
-
 _LSAS_PANEL = """\
 [bold #cba6f7]╔══════════════════════════════════════════════════════════════╗
 ║      LSAS — Layered Safety and Accuracy System for AI Systems       ║

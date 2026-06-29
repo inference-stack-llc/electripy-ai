@@ -147,6 +147,14 @@ module = "tests.*"
 disallow_untyped_defs = false
 disallow_untyped_calls = false
 
+[[tool.mypy.overrides]]
+# textual is an optional dependency — skip strict checking on the playground
+module = "electripy.playground.*"
+ignore_missing_imports = true
+disallow_untyped_defs = false
+disallow_untyped_calls = false
+disallow_incomplete_defs = false
+
 [tool.coverage.run]
 source = ["src"]
 omit = ["*/tests/*"]

@@ -119,7 +119,7 @@ def playground() -> None:
             "\n[red]✗[/red] The playground requires the [bold]textual[/bold] package.\n"
             "  Install it with:  [cyan]pip install 'electripy-ai\\[playground]'[/cyan]\n"
         )
-        raise SystemExit(1)
+        raise SystemExit(1) from None
     run()
 
 

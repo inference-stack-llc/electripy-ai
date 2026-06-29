@@ -139,8 +139,8 @@ class CostTab(Widget):
             f"Estimated Cost: [bold yellow]${all_cost:.4f}[/bold yellow]"
         )
         self.query_one("#totals-line2", Label).update(
-            f"  Ledger slices by: [dim]model, tenant, feature[/dim]  |  "
-            f"Thread-safe accumulation  |  No external services"
+            "  Ledger slices by: [dim]model, tenant, feature[/dim]  |  "
+            "Thread-safe accumulation  |  No external services"
         )
 
         # Sparkline — ASCII bar chart of tokens per call in history

@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-import time
-
 from textual import on
 from textual.app import ComposeResult
 from textual.containers import Horizontal, Vertical
@@ -192,7 +190,7 @@ class ReliabilityTab(Widget):
             self._breaker.call(_provider_fail)
         except CircuitOpenError:
             log.write(
-                f"[yellow]⚡ FAST FAIL[/yellow]  —  circuit is [bold]OPEN[/bold], "
+                "[yellow]⚡ FAST FAIL[/yellow]  —  circuit is [bold]OPEN[/bold], "
                 "provider call skipped entirely"
             )
         except ConnectionError as e:
@@ -217,7 +215,7 @@ class ReliabilityTab(Widget):
             result = self._breaker.call(_provider_ok)
             if prev_state == CircuitState.HALF_OPEN:
                 log.write(
-                    f"[green]✓ RECOVERED[/green]  probe succeeded → "
+                    "[green]✓ RECOVERED[/green]  probe succeeded → "
                     "[bold green]circuit CLOSED[/bold green]"
                 )
             else:
