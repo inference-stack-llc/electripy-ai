@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Local-only files (never committed)
+DEMO_SCRIPT.md
+
 # C extensions
 *.so
 

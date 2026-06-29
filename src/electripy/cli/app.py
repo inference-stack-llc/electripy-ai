@@ -101,6 +101,29 @@ def doctor() -> None:
 
 
 @app.command()
+def playground() -> None:
+    """Launch the interactive ElectriPy AI Playground (requires textual).
+
+    A fully offline TUI demonstrating every runtime domain using real
+    ElectriPy AI components: CircuitBreaker, ObservabilityService,
+    PolicyGateway, EvalAssertions, and CostLedger.
+
+    Install the playground extras first::
+
+        pip install 'electripy-ai[playground]'
+    """
+    try:
+        from electripy.playground import run  # noqa: PLC0415
+    except ImportError:
+        console.print(
+            "\n[red]✗[/red] The playground requires the [bold]textual[/bold] package.\n"
+            "  Install it with:  [cyan]pip install 'electripy-ai\\[playground]'[/cyan]\n"
+        )
+        raise SystemExit(1)
+    run()
+
+
+@app.command()
 def version() -> None:
     """Show ElectriPy version."""
     try:

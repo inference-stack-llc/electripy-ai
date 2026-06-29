@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Repositioned project from ElectriPy Studio to **ElectriPy AI**.
 - Updated project category to **Open Source AI Application Runtime**.
-- Introduced **LSAS Architecture** (Layered Systems Architecture for AI Systems) as the architectural model behind the runtime.
+- Introduced **LSAS Architecture** (Layered Safety and Accuracy System for AI Systems) as the architectural model behind the runtime.
 - Updated documentation, README, and package positioning around production AI reliability, observability, governance, evaluation, and runtime infrastructure.
 - Replaced marketing copy centred on "observable agent engineering" with runtime-first positioning.
 - Removed consultancy attributions from human-facing docs.

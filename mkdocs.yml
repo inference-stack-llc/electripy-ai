@@ -84,6 +84,12 @@ nav:
       - Runtime Governance Pattern: recipes/policy-gateway.md
       - Observable Runtime Routing: recipes/agent-collaboration-runtime.md
       - Policy + Collaboration E2E: recipes/policy-collaboration-e2e.md
+  - Patterns — Before & After:
+      - Basic LLM Call vs. Production Gateway: patterns/01-basic-llm-call.md
+      - Simple RAG vs. Production Retrieval: patterns/02-rag-pipeline.md
+      - Basic Agent vs. Governed Agent: patterns/03-agent-system.md
+      - Single Provider vs. Resilient Chain: patterns/04-provider-resilience.md
+      - No Observability vs. Full OTEL Stack: patterns/05-observability-gap.md
   - Reference:
       - API Reference: api.md
       - AI Product Engineering Overview: user-guide/ai-product-engineering.md

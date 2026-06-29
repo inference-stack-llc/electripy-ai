@@ -19,7 +19,7 @@ Most AI frameworks help you build AI. ElectriPy AI helps you operate AI in produ
 
 ## What is ElectriPy AI?
 
-ElectriPy AI is the open-source AI Application Runtime — the runtime implementation of LSAS (Layered Systems Architecture for AI Systems).
+ElectriPy AI is the open-source AI Application Runtime — the runtime implementation of LSAS (Layered Safety and Accuracy System for AI Systems).
 
 Most AI frameworks own the orchestration and agent layers. They stop there. Everything below — reliability, observability, governance, evaluation, and model runtime execution — gets rebuilt by hand on every team, in every project, every time a prototype moves to production.
 
@@ -155,7 +155,7 @@ See [recipes/03_policy_collaboration/](https://github.com/inference-stack-llc/el
 
 ## LSAS Architecture
 
-LSAS — Layered Systems Architecture for AI Systems — is the architectural model behind ElectriPy AI. It defines nine layers of concern for production AI systems and maps exactly where each belongs.
+LSAS — Layered Safety and Accuracy System for AI Systems — is the architectural model behind ElectriPy AI. It defines nine layers of concern for production AI systems and maps exactly where each belongs.
 
 ```
 L09  Application      → Business logic, UX, product surface
@@ -377,7 +377,28 @@ graph TD
 
 ---
 
-## How ElectriPy AI Compares
+## Interactive Playground
+
+ElectriPy AI ships an interactive terminal UI that demonstrates every runtime domain using real components — no mocks, no network calls, no API keys.
+
+```bash
+pip install 'electripy-ai[playground]'
+electripy playground
+```
+
+| Tab | What it demonstrates |
+|-----|---------------------|
+| 🔴 Reliability | Live `CircuitBreaker` state machine — inject failures, watch it trip and recover |
+| 🔵 Observability | `ObservabilityService` span tree with PII redaction in real time |
+| 🟣 Governance | `PolicyGateway` PREFLIGHT/POSTFLIGHT — see ALLOW, SANITIZE, DENY decisions |
+| 🟢 Evaluation | `eval_assertions` quality gates — pass and fail examples side by side |
+| 🟡 Cost Ledger | `CostLedger` accumulating token costs per model, tenant, and feature |
+
+Keyboard shortcuts `1`–`6` switch tabs. `q` to quit.
+
+---
+
+
 
 ElectriPy AI is **not a framework** — it is composable runtime infrastructure. Import the pieces you need; leave the rest.
 

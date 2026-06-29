@@ -1,6 +1,6 @@
 # Architecture
 
-ElectriPy AI is organized around the [LSAS Architecture](lsas.md) — Layered Systems Architecture for AI Systems.
+ElectriPy AI is organized around the [LSAS Architecture](lsas.md) — Layered Safety and Accuracy System for AI Systems.
 
 This page describes how ElectriPy AI's components map to the LSAS layer model and how they connect in a production system.
 

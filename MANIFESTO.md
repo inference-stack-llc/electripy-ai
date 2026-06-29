@@ -53,7 +53,7 @@ ElectriPy AI exists to make this layer composable, open source, and production-r
 
 ## 4. LSAS Architecture
 
-LSAS — Layered Systems Architecture for AI Systems — is the architectural model behind ElectriPy AI.
+LSAS — Layered Safety and Accuracy System for AI Systems — is the architectural model behind ElectriPy AI.
 
 It defines nine layers of concern for production AI systems:
 

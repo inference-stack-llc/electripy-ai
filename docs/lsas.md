@@ -1,6 +1,6 @@
 # LSAS Architecture
 
-**LSAS** — Layered Systems Architecture for AI Systems.
+**LSAS** — Layered Safety and Accuracy System for AI Systems.
 
 LSAS is the architectural model behind ElectriPy AI. It defines nine layers of concern for production AI systems, from governance at the foundation to application logic at the top.
 
