@@ -62,8 +62,7 @@ class CostTab(Widget):
         super().__init__()
         # One ledger per model
         self._ledgers: dict[str, CostLedger] = {
-            model: CostLedger(cost_per_1k_tokens=cpm)
-            for model, cpm in COST_PER_1K.items()
+            model: CostLedger(cost_per_1k_tokens=cpm) for model, cpm in COST_PER_1K.items()
         }
         self._scenario_index = 0
         self._call_history: list[dict] = []
@@ -72,9 +71,9 @@ class CostTab(Widget):
         yield Label("🟡  Cost Ledger — Token Cost Accumulation", classes="section-title")
 
         with Horizontal(classes="btn-row"):
-            yield Button("Add Next Call",   id="btn-add",    variant="primary")
-            yield Button("Add All Calls",   id="btn-add-all")
-            yield Button("Reset",           id="btn-reset")
+            yield Button("Add Next Call", id="btn-add", variant="primary")
+            yield Button("Add All Calls", id="btn-add-all")
+            yield Button("Reset", id="btn-reset")
 
         cost_table: DataTable[str] = DataTable(id="cost-table", zebra_stripes=True)
         yield cost_table
@@ -91,12 +90,12 @@ class CostTab(Widget):
 
     def on_mount(self) -> None:
         t: DataTable[str] = self.query_one("#cost-table", DataTable)
-        t.add_column("Model",      key="model",   width=18)
-        t.add_column("Calls",      key="calls",   width=8)
-        t.add_column("Tokens",     key="tokens",  width=12)
-        t.add_column("Est. Cost",  key="cost",    width=12)
-        t.add_column("Cost/1k",    key="rate",    width=10)
-        t.add_column("Tenant",     key="tenant",  width=12)
+        t.add_column("Model", key="model", width=18)
+        t.add_column("Calls", key="calls", width=8)
+        t.add_column("Tokens", key="tokens", width=12)
+        t.add_column("Est. Cost", key="cost", width=12)
+        t.add_column("Cost/1k", key="rate", width=10)
+        t.add_column("Tenant", key="tenant", width=12)
 
     # -----------------------------------------------------------------------
     # Helpers
@@ -115,9 +114,7 @@ class CostTab(Widget):
             if total.call_count == 0:
                 continue
             by_tenant = ledger.by_label("tenant")
-            tenant_str = ", ".join(
-                f"{k}({v.call_count})" for k, v in sorted(by_tenant.items())
-            )
+            tenant_str = ", ".join(f"{k}({v.call_count})" for k, v in sorted(by_tenant.items()))
             rate = COST_PER_1K.get(model, 0.0)
             table.add_row(
                 f"[bold]{model}[/bold]",
@@ -164,9 +161,7 @@ class CostTab(Widget):
         labels = scenario["labels"]
 
         if model not in self._ledgers:
-            self._ledgers[model] = CostLedger(
-                cost_per_1k_tokens=COST_PER_1K.get(model, 0.0)
-            )
+            self._ledgers[model] = CostLedger(cost_per_1k_tokens=COST_PER_1K.get(model, 0.0))
 
         self._ledgers[model].record(tokens=tokens, labels=labels)
         self._call_history.append(scenario)
@@ -196,7 +191,7 @@ class CostTab(Widget):
 
     @on(Button.Pressed, "#btn-add-all")
     def _add_all(self, _event: Button.Pressed) -> None:
-        remaining = COST_SCENARIOS[self._scenario_index:]
+        remaining = COST_SCENARIOS[self._scenario_index :]
         for scenario in remaining:
             self._add_call(scenario)
         self._scenario_index = len(COST_SCENARIOS)
@@ -204,8 +199,7 @@ class CostTab(Widget):
     @on(Button.Pressed, "#btn-reset")
     def _reset(self, _event: Button.Pressed) -> None:
         self._ledgers = {
-            model: CostLedger(cost_per_1k_tokens=cpm)
-            for model, cpm in COST_PER_1K.items()
+            model: CostLedger(cost_per_1k_tokens=cpm) for model, cpm in COST_PER_1K.items()
         }
         self._scenario_index = 0
         self._call_history.clear()

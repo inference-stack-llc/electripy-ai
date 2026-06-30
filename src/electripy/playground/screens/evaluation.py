@@ -23,6 +23,7 @@ from .._demo_data import EVAL_SAMPLES
 # Assertion suite for "France capital" outputs
 # ---------------------------------------------------------------------------
 
+
 def _build_checks() -> list[AssertionCheck]:
     return [
         contains_keywords(["Paris", "capital"], case_sensitive=False),
@@ -128,10 +129,10 @@ class EvaluationTab(Widget):
 
     def on_mount(self) -> None:
         t: DataTable[str] = self.query_one("#results-table", DataTable)
-        t.add_column("Check",       key="name",   width=22)
-        t.add_column("Result",      key="result", width=10)
-        t.add_column("Severity",    key="sev",    width=10)
-        t.add_column("Description", key="desc",   width=60)
+        t.add_column("Check", key="name", width=22)
+        t.add_column("Result", key="result", width=10)
+        t.add_column("Severity", key="sev", width=10)
+        t.add_column("Description", key="desc", width=60)
         self._refresh_sample_label()
 
     # -----------------------------------------------------------------------

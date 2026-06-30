@@ -31,7 +31,7 @@ _RULES: list[PolicyRule] = [
         description="Mask email addresses",
         stage=PolicyStage.PREFLIGHT,
         pattern=r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b",
-        severity=PolicySeverity.MEDIUM,   # MEDIUM → SANITIZE (no escalation)
+        severity=PolicySeverity.MEDIUM,  # MEDIUM → SANITIZE (no escalation)
         action=PolicyAction.SANITIZE,
         replacement="[EMAIL REDACTED]",
     ),
@@ -51,7 +51,7 @@ _RULES: list[PolicyRule] = [
         description="Mask credit card numbers",
         stage=PolicyStage.PREFLIGHT,
         pattern=r"\b\d{4}[- ]?\d{4}[- ]?\d{4}[- ]?\d{4}\b",
-        severity=PolicySeverity.HIGH,      # HIGH → REQUIRE_APPROVAL (require_approval_on_high)
+        severity=PolicySeverity.HIGH,  # HIGH → REQUIRE_APPROVAL (require_approval_on_high)
         action=PolicyAction.SANITIZE,
         replacement="[CARD REDACTED]",
     ),
@@ -175,11 +175,11 @@ class GovernanceTab(Widget):
 
     def on_mount(self) -> None:
         t: DataTable[str] = self.query_one("#findings-table", DataTable)
-        t.add_column("Rule ID",     key="rule",   width=18)
-        t.add_column("Code",        key="code",   width=14)
-        t.add_column("Severity",    key="sev",    width=10)
-        t.add_column("Action",      key="action", width=14)
-        t.add_column("Message",     key="msg",    width=50)
+        t.add_column("Rule ID", key="rule", width=18)
+        t.add_column("Code", key="code", width=14)
+        t.add_column("Severity", key="sev", width=10)
+        t.add_column("Action", key="action", width=14)
+        t.add_column("Message", key="msg", width=50)
 
     # -----------------------------------------------------------------------
     # Helpers
@@ -224,9 +224,7 @@ class GovernanceTab(Widget):
             f"{'YES — execution halted' if decision.blocked else 'NO — execution proceeds'}[/]"
         )
         if decision.sanitized_text:
-            san_lbl.update(
-                f"  Sanitized: [green]{decision.sanitized_text[:120]}[/green]"
-            )
+            san_lbl.update(f"  Sanitized: [green]{decision.sanitized_text[:120]}[/green]")
         else:
             san_lbl.update("")
 

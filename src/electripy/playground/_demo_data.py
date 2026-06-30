@@ -63,9 +63,9 @@ EVAL_SAMPLES = [
 # Assertion checks definition (as text — actual check objects built in the screen)
 EVAL_CHECKS_DESCRIPTION = [
     ("contains_keywords", "must contain: Paris, capital"),
-    ("matches_regex",     r"matches: \bParis\b"),
-    ("satisfies_length",  "length in [20, ∞]"),
-    ("no_hallucination",  "must not claim France has no capital"),
+    ("matches_regex", r"matches: \bParis\b"),
+    ("satisfies_length", "length in [20, ∞]"),
+    ("no_hallucination", "must not claim France has no capital"),
 ]
 
 # ---------------------------------------------------------------------------
@@ -86,18 +86,18 @@ OBSERVE_PROMPT_CLEAN = (
 # ---------------------------------------------------------------------------
 
 COST_SCENARIOS = [
-    {"model": "gpt-4o",        "tokens": 1_240, "labels": {"tenant": "acme",  "feature": "summarise"}},
-    {"model": "gpt-4o-mini",   "tokens":   480, "labels": {"tenant": "acme",  "feature": "classify"}},
-    {"model": "claude-3-5",    "tokens": 2_100, "labels": {"tenant": "beta",  "feature": "summarise"}},
-    {"model": "gpt-4o",        "tokens":   890, "labels": {"tenant": "acme",  "feature": "extract"}},
-    {"model": "gpt-4o-mini",   "tokens":   310, "labels": {"tenant": "gamma", "feature": "classify"}},
-    {"model": "ollama/llama3", "tokens": 1_540, "labels": {"tenant": "beta",  "feature": "draft"}},
+    {"model": "gpt-4o", "tokens": 1_240, "labels": {"tenant": "acme", "feature": "summarise"}},
+    {"model": "gpt-4o-mini", "tokens": 480, "labels": {"tenant": "acme", "feature": "classify"}},
+    {"model": "claude-3-5", "tokens": 2_100, "labels": {"tenant": "beta", "feature": "summarise"}},
+    {"model": "gpt-4o", "tokens": 890, "labels": {"tenant": "acme", "feature": "extract"}},
+    {"model": "gpt-4o-mini", "tokens": 310, "labels": {"tenant": "gamma", "feature": "classify"}},
+    {"model": "ollama/llama3", "tokens": 1_540, "labels": {"tenant": "beta", "feature": "draft"}},
 ]
 
 # Cost per 1k tokens per model (approximate)
 COST_PER_1K: dict[str, float] = {
-    "gpt-4o":        0.010,
-    "gpt-4o-mini":   0.0004,
-    "claude-3-5":    0.008,
-    "ollama/llama3": 0.0,   # self-hosted
+    "gpt-4o": 0.010,
+    "gpt-4o-mini": 0.0004,
+    "claude-3-5": 0.008,
+    "ollama/llama3": 0.0,  # self-hosted
 }
