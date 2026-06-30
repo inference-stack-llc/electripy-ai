@@ -32,13 +32,13 @@ class PlaygroundApp(App):
     SUB_TITLE = "v0.5.0 — Open Source AI Application Runtime — fully offline"
 
     BINDINGS = [
-        ("1", "switch_tab('home')",          "Home"),
-        ("2", "switch_tab('reliability')",   "Reliability"),
+        ("1", "switch_tab('home')", "Home"),
+        ("2", "switch_tab('reliability')", "Reliability"),
         ("3", "switch_tab('observability')", "Observability"),
-        ("4", "switch_tab('governance')",    "Governance"),
-        ("5", "switch_tab('evaluation')",    "Evaluation"),
-        ("6", "switch_tab('cost')",          "Cost"),
-        ("q", "quit",                        "Quit"),
+        ("4", "switch_tab('governance')", "Governance"),
+        ("5", "switch_tab('evaluation')", "Evaluation"),
+        ("6", "switch_tab('cost')", "Cost"),
+        ("q", "quit", "Quit"),
     ]
 
     CSS = """
@@ -118,17 +118,17 @@ class PlaygroundApp(App):
     def compose(self) -> ComposeResult:
         yield Header()
         with TabbedContent(initial="home"):
-            with TabPane("⚡ Home",           id="home"):
+            with TabPane("⚡ Home", id="home"):
                 yield HomeTab()
-            with TabPane("🔴 Reliability",    id="reliability"):
+            with TabPane("🔴 Reliability", id="reliability"):
                 yield ReliabilityTab()
-            with TabPane("🔵 Observability",  id="observability"):
+            with TabPane("🔵 Observability", id="observability"):
                 yield ObservabilityTab()
-            with TabPane("🟣 Governance",     id="governance"):
+            with TabPane("🟣 Governance", id="governance"):
                 yield GovernanceTab()
-            with TabPane("🟢 Evaluation",     id="evaluation"):
+            with TabPane("🟢 Evaluation", id="evaluation"):
                 yield EvaluationTab()
-            with TabPane("🟡 Cost Ledger",    id="cost"):
+            with TabPane("🟡 Cost Ledger", id="cost"):
                 yield CostTab()
         yield Footer()
 
@@ -143,6 +143,7 @@ def run() -> None:
         PlaygroundApp().run()
     except ImportError as exc:
         import sys
+
         print(
             f"\n[ERROR] Playground requires the 'textual' package:\n"
             f"  pip install 'electripy-ai[playground]'\n\n"
