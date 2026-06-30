@@ -125,6 +125,7 @@ ignore = [
 line-length = 100
 target-version = ["py311"]
 include = '\.pyi?$'
+extend-exclude = 'src/electripy/playground/'
 
 [tool.mypy]
 python_version = "3.11"
@@ -154,6 +155,11 @@ ignore_missing_imports = true
 disallow_untyped_defs = false
 disallow_untyped_calls = false
 disallow_incomplete_defs = false
+
+[[tool.mypy.overrides]]
+# textual is an optional dependency used by the playground
+module = ["textual", "textual.*"]
+ignore_missing_imports = true
 
 [tool.coverage.run]
 source = ["src"]
