@@ -113,7 +113,11 @@ class ReliabilityTab(Widget):
 
         # State machine visualisation
         with Horizontal(classes="state-row"):
-            yield Static("CLOSED\n\n✓ Calls pass through", id="box-closed", classes="state-box state-active-closed")
+            yield Static(
+                "CLOSED\n\n✓ Calls pass through",
+                id="box-closed",
+                classes="state-box state-active-closed",
+            )
             yield Static("───▶", classes="arrow")
             yield Static("OPEN\n\n⚡ Fast-fail, no calls", id="box-open", classes="state-box")
             yield Static("───▶", classes="arrow")

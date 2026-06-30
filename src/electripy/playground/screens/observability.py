@@ -134,11 +134,11 @@ class ObservabilityTab(Widget):
 
     def on_mount(self) -> None:
         table = self.query_one("#span-table", DataTable)
-        table.add_column("Span Name",   key="name",     width=30)
-        table.add_column("Kind",        key="kind",     width=12)
-        table.add_column("Duration",    key="dur",      width=10)
-        table.add_column("Status",      key="status",   width=8)
-        table.add_column("Key Attribute", key="attr",   width=40)
+        table.add_column("Span Name", key="name", width=30)
+        table.add_column("Kind", key="kind", width=12)
+        table.add_column("Duration", key="dur", width=10)
+        table.add_column("Status", key="status", width=8)
+        table.add_column("Key Attribute", key="attr", width=40)
 
     # -----------------------------------------------------------------------
     # Helpers

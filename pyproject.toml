@@ -150,6 +150,11 @@ disallow_untyped_calls = false
 
 [[tool.mypy.overrides]]
 # textual is an optional dependency — skip strict checking on the playground
+module = ["textual", "textual.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+# textual is an optional dependency — skip strict checking on the playground
 module = "electripy.playground.*"
 ignore_missing_imports = true
 disallow_untyped_defs = false
